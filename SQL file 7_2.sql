@@ -1,0 +1,21 @@
+create table tt1(id int primary key);
+desc tt1;
+ALTER TABLE tt1 add tname varchar(50) NOT NULL;
+ALTER TABLE tt1 modify tname varchar(70) NOT NULL;
+ALTER TABLE tt1 drop column tname;
+
+drop table tt1;
+drop database db1;
+create table tt2 (tid int, tname varchar(50));
+ALTER TABLE tt2 modify tid int primary key;
+desc tt2;
+alter table tt2 drop primary key;
+rename table tt2 to tt3;
+select * from tt2;
+alter table tt3 drop tname;
+desc tt3;
+alter table tt3 add tname varchar(50);
+alter table tt3 drop column tname;
+use jandb;
+select * from students;
+delete from students where student_id = 4;
